@@ -2,11 +2,6 @@ name: 'Application-security-scan'
 
 description: 'A GitHub Action to perform an application security scan using ZAP.'
 author: 'Your Name or Organization'
-
-on:
-  schedule:
-    - cron: '00 9 * * 1,3,5'
-
 inputs:
   zap_token:
     description: 'ZAP API token'
