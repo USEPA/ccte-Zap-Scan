@@ -10,7 +10,7 @@ This GitHub Action performs application security scans using OWASP ZAP (Zed Atta
 
 ## Example Usage
 ```yaml
-uses: your-username/zap-github-action@v1
+uses: USEPA/ccte-Zap-Scan@main 
 with:
   zap_token: ${{ secrets.GITHUB_TOKEN }}
   zap_target: 'https://your-target-url.com'
