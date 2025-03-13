@@ -16,3 +16,4 @@ with:
   zap_target: 'https://your-target-url.com'
   zap_format: 'openapi'
   zap_cmd_options: '-a'
+  x_api_key: ${{ secrets.X_API_KEY }}
