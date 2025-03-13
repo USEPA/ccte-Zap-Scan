@@ -1,0 +1,31 @@
+name: 'Application-security-scan'
+
+description: 'A GitHub Action to perform an application security scan using ZAP.'
+author: 'Your Name or Organization'
+inputs:
+  zap_token:
+    description: 'ZAP API token'
+    required: true
+  zap_target:
+    description: 'Target URL for ZAP scan'
+    required: true
+    default: 'https://ccte-api-rapidtox-dev.epa.gov/chemical/v3/api-docs'
+  zap_format:
+    description: 'Format for ZAP scan'
+    required: true
+    default: 'openapi'
+  zap_cmd_options:
+    description: 'Additional command options for ZAP'
+    required: false
+    default: '-a'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: ZAP Scan
+      uses: zaproxy/action-api-scan@v0.9.0
+      with:
+        token: ${{ inputs.zap_token }}
+        format: ${{ inputs.zap_format }}
+        target: ${{ inputs.zap_target }}
+        cmd_options: ${{ inputs.zap_cmd_options }}
