@@ -18,6 +18,9 @@ inputs:
     description: 'Additional command options for ZAP'
     required: false
     default: '-a'
+  x_api_key:
+    description: 'API key for authorization'
+    required: true
 
 runs:
   using: 'composite'
@@ -29,3 +32,5 @@ runs:
         format: ${{ inputs.zap_format }}
         target: ${{ inputs.zap_target }}
         cmd_options: ${{ inputs.zap_cmd_options }}
+      env:
+        ZAP_AUTH_HEADER_VALUE: "x-api-key=${{ inputs.x_api_key }}"
