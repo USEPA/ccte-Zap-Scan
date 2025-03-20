@@ -9,7 +9,6 @@ inputs:
   zap_target:
     description: 'Target URL for ZAP scan'
     required: true
-    default: 'https://ccte-api-rapidtox-dev.epa.gov/chemical/v3/api-docs'
   zap_format:
     description: 'Format for ZAP scan'
     required: true
