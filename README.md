@@ -1,6 +1,6 @@
 # ZAP GitHub Action
 
-This GitHub Action performs application security scans using OWASP ZAP (Zed Attack Proxy).
+This GitHub Action performs application security scans using [ZAP](https://www.zaproxy.org/) (Zed Attack Proxy).
 
 ## Inputs
 - `zap_token`: ZAP API token for authentication (required).
